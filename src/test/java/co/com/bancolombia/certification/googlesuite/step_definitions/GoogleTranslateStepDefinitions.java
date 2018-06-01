@@ -31,13 +31,11 @@ public class GoogleTranslateStepDefinitions {
 		susan.can(BrowseTheWeb.with(herBrowser));
 	}
 	
-	
 	@Given("^that Susan wants to translate a word$")
 	public void thatSusanWantsToTranslateAWord() throws Exception {
 		susan.wasAbleTo(OpenTheBrowser.at(GOOGLE_HOME_PAGE),
 				GoTo.theApp(GOOGLE_TRANSLATE));
 	}
-
 
 	@When("^she translates the word (.*) from (.*) to (.*)$")
 	public void sheTranslatesTheWordCheeseFromEnglishToSpanish(String word, String sourceLanguage, String targetLanguage) throws Exception {
